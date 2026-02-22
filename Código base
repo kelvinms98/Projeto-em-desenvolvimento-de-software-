@@ -1,0 +1,34 @@
+int main() {
+    sqlite3 *db;
+    char *errMsg = 0;
+
+    int rc = sqlite3_open("produtos.db", &db);
+
+    if (rc) {
+        printf("Erro ao abrir banco: %s\n", sqlite3_errmsg(db));
+        return 1;
+    }
+
+    const char *sql =
+        "CREATE TABLE IF NOT EXISTS produtos ("
+        "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+        "nome TEXT NOT NULL,"
+        "categoria TEXT NOT NULL,"
+        "preco REAL NOT NULL,"
+        "estoque INTEGER NOT NULL);"
+
+        "INSERT INTO produtos (nome, categoria, preco, estoque) VALUES "
+        "('Ração Premium para Cães 10kg','Ração',129.90,20);";
+
+    rc = sqlite3_exec(db, sql, 0, 0, &errMsg);
+
+    if (rc != SQLITE_OK) {
+        printf("Erro SQL: %s\n", errMsg);
+        sqlite3_free(errMsg);
+    } else {
+        printf("Banco criado\n");
+    }
+
+    sqlite3_close(db);
+    return 0;
+}

@@ -11,16 +11,14 @@
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- Cabeçalho / Navegação -->
 <header class="header">
 <div class="container header__inner">
 <div class="brand">
-<!-- Logo textual; troque por imagem quando quiser -->
+<!-- Logo substituída por imagem -->
 <a href="/" class="brand__link" aria-label="Velluto Motors — Início">
-<span class="brand__emblem" aria-hidden="true">V</span>
-<span class="brand__name">Velluto <strong>Motors</strong></span>
+<img src="images/logo.svg" alt="Velluto Motors" class="brand__logo" />
 </a>
 </div>
 <!-- Toggle menu mobile (sem JS) -->
@@ -35,7 +33,7 @@
 <li><a href="#sobre">Sobre</a></li>
 <li><a href="#servicos">Serviços</a></li>
 <li><a href="#contato">Contato</a></li>
-<li><a class="btn btn--gold" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Consultor VIP</a></li>
+<li><a class="btn btn--gold" href="https://wa.me/5511994761582" target="_blank" rel="noopener">Consultor VIP</a></li>
 </ul>
 </nav>
 </div>
@@ -45,11 +43,12 @@
 <!-- Hero -->
 <section class="hero" role="banner" aria-label="Vitrine principal">
 <div class="hero__media" aria-hidden="true">
-<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1600&auto=format&fit=crop" alt="Ferrari F8 Tributo 2023" class="hero__image" />
+<!-- sem imagem de fundo, apenas cor/degradê -->
 <div class="hero__overlay"></div>
 </div>
 <div class="container hero__content">
 <h1 class="hero__title">Luxo que combina com você.</h1>
+<img src="https://images.unsplash.com/photo-1549921296-3b0643b021d6?q=80&w=1200&auto=format&fit=crop" alt="Jaguar esportivo" class="hero__subtitle-image" />
 <p class="hero__subtitle">Seleção exclusiva de superesportivos, SUVs premium e sedãs executivos.</p>
 <div class="hero__actions">
 <a class="btn btn--gold" href="#catalogo">Ver Catálogo Exclusivo</a>
@@ -115,7 +114,62 @@
 <a class="btn btn--gold" href="https://wa.me/5511994761582" target="_blank" rel="noopener">Falar com Consultor</a>
 </div>
 </div>
-</section></main>
+
+
+<!-- Detalhes do Lamborghini Aventador SVJ 2021 -->
+<section id="detalhes-lambo" class="section">
+<div class="container">
+<header class="section__header">
+<h2 class="section__title">Detalhes do Lamborghini Aventador SVJ 2021</h2>
+<p class="section__subtitle">Potência extrema e aerodinâmica de pista em um V12 brutal.</p>
+</header>
+
+<div class="details-content">
+<div class="details-image">
+<img src="https://images.unsplash.com/photo-1553882900-d174edf2122f?q=80&w=800&auto=format&fit=crop" alt="Lamborghini Aventador SVJ 2021" />
+</div>
+<div class="details-specs">
+<h3>Especificações Técnicas</h3>
+<ul>
+<li><strong>Motor:</strong> V12 6.5L aspirado</li>
+<li><strong>Potência:</strong> 770 cv a 8.500 rpm</li>
+<li><strong>Torque:</strong> 720 Nm a 6.750 rpm</li>
+<li><strong>Aceleração 0-100 km/h:</strong> 2,8 segundos</li>
+<li><strong>Velocidade Máxima:</strong> 350 km/h</li>
+<li><strong>Peso:</strong> 1.525 kg</li>
+<li><strong>Transmissão:</strong> Automática ISR de 7 velocidades</li>
+</ul>
+
+<h3>Recursos e Tecnologia</h3>
+<ul>
+<li>Sistema de tração integral</li>
+<li>Modo aerodinâmico ALA 2.0 (active aerodynamics)</li>
+<li>Freios de carbono-cerâmica</li>
+<li>Direção nas quatro rodas</li>
+<li>Sistema de controle de estabilidade ESC</li>
+<li>Painel digital com tela multitouch</li>
+</ul>
+
+<h3>Design e Interior</h3>
+<ul>
+<li>Carbono extenso no monocoque e painel</li>
+<li>Assentos em fibra de carbono com acabamento Alcântara</li>
+<li>Volante plano em fibra de carbono</li>
+<li>Sistema de som premium</li>
+<li>Iluminação ambiente configurável</li>
+</ul>
+</div>
+</div>
+
+<div class="cta-section">
+<h3>Quer saber mais sobre a Aventador?</h3>
+<p>Fale com nossos especialistas e agende uma visita VIP.</p>
+<a class="btn btn--gold" href="https://wa.me/5511994761582" target="_blank" rel="noopener">Falar com Consultor</a>
+</div>
+</div>
+</section>
+
+</main>
 
 <!-- Rodapé -->
 <footer class="footer">
@@ -150,6 +204,28 @@
 </ul>
 <div class="car-card__footer">
 <span class="price">R$ 3.900.000</span>
+<a class="btn btn--ghost" href="#detalhes">Ver detalhes</a>
+</div>
+</div>
+</article>
+
+<!-- Card 2 -->
+<article class="car-card">
+<a class="car-card__media" href="#detalhes-lambo" aria-label="Ver detalhes: Lamborghini Aventador SVJ 2021">
+<img src="https://images.unsplash.com/photo-1553882900-d174edf2122f?q=80&w=1600&auto=format&fit=crop" alt="Lamborghini Aventador SVJ azul" loading="lazy" />
+</a>
+<div class="car-card__body">
+<h3 class="car-card__title">Lamborghini Aventador <span class="year">2021</span></h3>
+<p class="car-card__description">Supercarro icônico com motor V12 de 770 cv, 0-100 km/h em 2,8s, e aerodinâmica avançada. Visual agressivo e tecnologia de pista em versão SVJ.</p>
+<ul class="car-card__specs">
+<li><strong>Potência:</strong> 770 cv</li>
+<li><strong>Aceleração 0-100 km/h:</strong> 2,8s</li>
+<li><strong>Motor:</strong> V12 6.5L</li>
+<li><strong>Velocidade Máxima:</strong> 350 km/h</li>
+<li><strong>Torque:</strong> 720 Nm</li>
+</ul>
+<div class="car-card__footer">
+<span class="price">R$ 5.200.000</span>
 <a class="btn btn--ghost" href="#detalhes">Ver detalhes</a>
 </div>
 </div>

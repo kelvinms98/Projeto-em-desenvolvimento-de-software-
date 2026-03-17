@@ -1,0 +1,5 @@
+CREATE TABLE alunos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome_completo TEXT NOT NULL,
+    ra TEXT NOT NULL UNIQUE CHECK(length(ra) = 10)
+);

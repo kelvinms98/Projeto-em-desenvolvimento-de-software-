@@ -26,6 +26,12 @@ body {
   position: relative;
   border-bottom: none;
   box-shadow: none;
+
+position: sticky;      /* Faz o menu grudar */
+  top: 0;               /* No topo da tela */
+  z-index: 1000;        /* Garante que fique em cima de tudo */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para dar profundidade */
+
 }
 
 .header .container {

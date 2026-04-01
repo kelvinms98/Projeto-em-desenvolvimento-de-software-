@@ -23,10 +23,19 @@
             text-decoration: none;
             border-radius: 6px;
             transition: 0.3s;
+            margin-top: 10px;
         }
 
         .btn-primary:hover {
             background-color: #003f47;
+        }
+
+        /* 🔥 Upgrade visual das imagens */
+        .hero-right img,
+        .details-image img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -57,9 +66,12 @@
                 <div class="hero-left">
                     <p class="eyebrow">Excelência em Serviços</p>
                     <h1 class="hero-title">Cuidados Premium para seu Supercarro</h1>
-                    <p class="hero-subtitle">Na Velluto Motors, cada serviço é pensado para manter o desempenho e a estética de verdadeiras máquinas de alta performance.</p>
+                    <p class="hero-subtitle">
+                        Na Velluto Motors, cada serviço é pensado para manter o desempenho e a estética de verdadeiras máquinas de alta performance.
+                    </p>
                 </div>
                 <div class="hero-right">
+                    <!-- ⚠️ Coloque uma imagem real aqui -->
                     <img src="images/servicos-hero.jpg" alt="Serviços Velluto" />
                 </div>
             </div>
@@ -74,29 +86,38 @@
                     <div class="servico-item">
                         <h3>Manutenção Premium</h3>
                         <p>Revisões completas com diagnóstico avançado e peças originais.</p>
-                        <p><strong>Contato:</strong> (11) xxxx-xxxx</p>
+                        <a href="https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20em%20Manutenção%20Premium" target="_blank" class="btn-primary">
+                            💬 Falar no WhatsApp
+                        </a>
                     </div>
 
                     <div class="servico-item">
                         <h3>Preparação de Performance</h3>
                         <p>Upgrades de motor, escapamento esportivo e ajustes de ECU.</p>
-                        <p><strong>Contato:</strong> (11) xxxx-xxxx</p>
+                        <a href="https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20em%20Preparação%20de%20Performance" target="_blank" class="btn-primary">
+                            💬 Falar no WhatsApp
+                        </a>
                     </div>
 
                     <div class="servico-item">
                         <h3>Customização Exclusiva</h3>
                         <p>Personalização estética completa: rodas, pintura e acabamento interno.</p>
-                        <p><strong>Contato:</strong> (11) xxxx-xxxx</p>
+                        <a href="https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20em%20Customização%20Exclusiva" target="_blank" class="btn-primary">
+                            💬 Falar no WhatsApp
+                        </a>
                     </div>
 
                     <div class="servico-item">
                         <h3>Detalhamento Automotivo</h3>
                         <p>Polimento técnico, vitrificação e proteção completa da pintura.</p>
-                        <p><strong>Contato:</strong> (11) xxxx-xxxx</p>
+                        <a href="https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20em%20Detalhamento%20Automotivo" target="_blank" class="btn-primary">
+                            💬 Falar no WhatsApp
+                        </a>
                     </div>
                 </div>
 
                 <div class="details-image">
+                    <!-- ⚠️ Coloque uma imagem real aqui -->
                     <img src="images/servicos-detail.jpg" alt="Atelier de Serviços" />
                 </div>
             </div>
@@ -109,14 +130,16 @@
                 Fale diretamente com nossa equipe e garanta atendimento exclusivo.
             </p>
 
-            <a href="tel:xxxxxxxxxxx" class="btn-primary">
-                📞 Ligar agora: (11) xxxx-xxxx
+            <a href="tel:+5511999999999" class="btn-primary">
+                📞 Ligar agora: (11) 99999-9999
             </a>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container"><p>&copy; 2026 Velluto Motors</p></div>
+        <div class="container">
+            <p>&copy; 2026 Velluto Motors</p>
+        </div>
     </footer>
 </body>
 </html>

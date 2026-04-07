@@ -1,70 +1,194 @@
-<main id="conteudo">
-  <section class="section contato-section">
-    <div class="container">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato — Velluto Motors</title>
+  <meta name="description" content="Entre em contato com a Velluto Motors. Atendimento VIP para clientes exclusivos." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-      <header class="section__header" style="margin-top: 50px;">
-        <h2 class="section__title">Fale Conosco</h2>
-        <p class="section__subtitle">
-          Atendimento exclusivo para clientes que buscam excelência.
-        </p>
-      </header>
+  <!-- Cabeçalho / Navegação -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <a href="index.html" class="brand__link" aria-label="Velluto Motors — Início">
+          <img src="images/VM_logo.PNG" alt="Velluto Motors" class="brand__logo" />
+        </a>
+      </div>
 
-      <div class="contato-grid">
+      <nav class="nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html#catalogo-menu">Catálogo</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a class="btn btn--gold" href="https://wa.me/5511994761582" target="_blank" rel="noopener">Consultor VIP</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <!-- BLOCO 1 -->
-        <div class="contato-card">
-          <h3>Showroom</h3>
-          <p>
-            Av. Europa, 1500<br>
-            Jardim Europa<br>
-            São Paulo - SP
-          </p>
+  <!-- Menu Catálogo Fullscreen -->
+  <section id="catalogo-menu" class="catalog-menu" aria-labelledby="catalogo-title">
+    <div class="catalog-menu__inner">
+      <div class="catalog-menu__top">
+        <h2 id="catalogo-title">Catálogo</h2>
+        <a href="#" class="catalog-menu__close" aria-label="Fechar catálogo">×</a>
+      </div>
+      <div class="catalog-menu__wrap">
+        <aside class="catalog-menu__side">
+          <button class="catalog-menu__side-btn active" data-panel="ferrari">Ferrari</button>
+          <button class="catalog-menu__side-btn" data-panel="lamborghini">Lamborghini</button>
+          <button class="catalog-menu__side-btn" data-panel="suv">SUVs</button>
+          <button class="catalog-menu__side-btn" data-panel="hiper">Hipercarros</button>
+        </aside>
 
-          <a 
-            href="https://www.google.com/maps?q=Av.+Europa,+1500+São+Paulo" 
-            target="_blank" 
-            class="btn btn--outline"
-          >
-            Ver no mapa
-          </a>
+        <div class="catalog-menu__slides">
+          <div class="catalog-slide active" id="ferrari">
+            <h3>Ferrari</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-f8.html" class="catalog-card"><strong>F8 Tributo</strong><span>2023 • V8 Biturbo</span></a>
+              <a href="detalhe-purosangue.html" class="catalog-card"><strong>Purosangue</strong><span>2025 • SUV</span></a>
+            </div>
+          </div>
+          <div class="catalog-slide" id="lamborghini">
+            <h3>Lamborghini</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-lambo.html" class="catalog-card"><strong>Aventador SVJ</strong><span>2021 • V12</span></a>
+              <a href="detalhe-urus.html" class="catalog-card"><strong>Urus</strong><span>2023 • SUV</span></a>
+            </div>
+          </div>
+          <div class="catalog-slide" id="suv">
+            <h3>SUVs</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-dbx.html" class="catalog-card"><strong>DBX707</strong><span>2024 • V8</span></a>
+              <a href="detalhe-rsq8.html" class="catalog-card"><strong>Audi RS Q8</strong><span>2023 • V8</span></a>
+              <a href="detalhe-brabus.html" class="catalog-card"><strong>Brabus G63 800</strong><span>2023 • V8</span></a>
+            </div>
+          </div>
+          <div class="catalog-slide" id="hiper">
+            <h3>Hipercarros</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-mercedes.html" class="catalog-card"><strong>AMG ONE</strong><span>2022 • Híbrido</span></a>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- BLOCO 2 -->
-        <div class="contato-card">
-          <h3>Contato Direto</h3>
+  <!-- Script do Catálogo -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sideButtons = document.querySelectorAll('.catalog-menu__side-btn');
+      const slides = document.querySelectorAll('.catalog-slide');
 
-          <p>
-            <strong>WhatsApp:</strong><br>
-            <a href="https://wa.me/5511994761582" target="_blank">
-              (11) 99476-1582
-            </a>
+      sideButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const target = this.dataset.panel;
+          sideButtons.forEach(b => b.classList.remove('active'));
+          slides.forEach(s => s.classList.remove('active'));
+          this.classList.add('active');
+          document.getElementById(target)?.classList.add('active');
+        });
+      });
+    });
+  </script>
+
+  <!-- Conteúdo Principal -->
+  <main id="conteudo">
+    <section class="section contato-section">
+      <div class="container">
+
+        <header class="section__header">
+          <h2 class="section__title">Fale Conosco</h2>
+          <p class="section__subtitle">
+            Atendimento exclusivo para clientes que buscam excelência.
           </p>
+        </header>
 
-          <p>
-            <strong>Telefone:</strong><br>
-            <a href="tel:5511994761582">
-              (11) 99476-1582
+        <div class="contato-grid">
+
+          <!-- Card Showroom -->
+          <div class="contato-card">
+            <h3>Showroom</h3>
+            <p>
+              Av. Europa, 1500<br>
+              Jardim Europa<br>
+              São Paulo - SP
+            </p>
+            <a 
+              href="https://www.google.com/maps?q=Av.+Europa,+1500+São+Paulo" 
+              target="_blank" 
+              class="btn btn--outline"
+              rel="noopener"
+            >
+              Ver no mapa
             </a>
-          </p>
+          </div>
 
-          <p>
-            <strong>E-mail:</strong><br>
-            <a href="mailto:concierge@vellutomotors.com.br">
-              concierge@vellutomotors.com.br
+          <!-- Card Contato Direto -->
+          <div class="contato-card">
+            <h3>Contato Direto</h3>
+
+            <p>
+              <strong>WhatsApp</strong><br>
+              <a href="https://wa.me/5511994761582" target="_blank" rel="noopener">
+                (11) 99476-1582
+              </a>
+            </p>
+
+            <p>
+              <strong>Telefone</strong><br>
+              <a href="tel:+5511994761582">
+                (11) 99476-1582
+              </a>
+            </p>
+
+            <p>
+              <strong>E-mail</strong><br>
+              <a href="mailto:concierge@vellutomotors.com.br">
+                concierge@vellutomotors.com.br
+              </a>
+            </p>
+
+            <a 
+              class="btn btn--gold" 
+              href="https://wa.me/5511994761582" 
+              target="_blank"
+              rel="noopener"
+            >
+              Falar com Consultor
             </a>
-          </p>
+          </div>
 
-          <a 
-            class="btn btn--gold" 
-            href="https://wa.me/5511994761582" 
-            target="_blank"
-          >
-            Falar com Consultor
-          </a>
         </div>
 
       </div>
+    </section>
+  </main>
 
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Contato: 
+        <a href="tel:+5511994761582">(11) 99476-1582</a> | 
+        <a href="https://wa.me/5511994761582" target="_blank" rel="noopener">WhatsApp</a> | 
+        <a href="mailto:concierge@vellutomotors.com.br">E-mail</a>
+      </p>
+      <p>&copy; 2026 Velluto Motors. Todos os direitos reservados.</p>
     </div>
-  </section>
-</main>
+  </footer>
+
+</body>
+</html>

@@ -1,145 +1,212 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Serviços - Velluto Motors</title>
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-        /* Estilos específicos para serviços */
-        .servico-item {
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            border-left: 3px solid #005F6B;
-            background: #fff;
-            border-radius: 6px;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            padding: 12px 20px;
-            background-color: #005F6B;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: 0.3s;
-            margin-top: 10px;
-        }
-
-        .btn-primary:hover {
-            background-color: #003f47;
-        }
-
-        /* 🔥 Upgrade visual das imagens */
-        .hero-right img,
-        .details-image img {
-            width: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serviços — Velluto Motors</title>
+  <meta name="description" content="Serviços premium para seu supercarro: manutenção, performance, customização e detalhamento." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header class="header">
-        <div class="container header__inner">
-            <div class="brand">
-                <a href="index.html" class="brand__link">
-                    <img src="images/VM_logo.PNG" alt="Velluto Motors" class="brand__logo"/>
-                </a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <a href="index.html" class="brand__link" aria-label="Velluto Motors — Início">
+          <img src="images/VM_logo.PNG" alt="Velluto Motors" class="brand__logo" />
+        </a>
+      </div>
+      
+      <nav class="nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html#catalogo-menu">Catálogo</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a class="btn btn--gold" href="https://wa.me/5511994761582" target="_blank" rel="noopener">Consultor VIP</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Menu Catálogo Fullscreen -->
+  <section id="catalogo-menu" class="catalog-menu" aria-labelledby="catalogo-title">
+    <div class="catalog-menu__inner">
+      <div class="catalog-menu__top">
+        <h2 id="catalogo-title">Catálogo</h2>
+        <a href="#" class="catalog-menu__close" aria-label="Fechar catálogo">×</a>
+      </div>
+      <div class="catalog-menu__wrap">
+        <aside class="catalog-menu__side">
+          <button class="catalog-menu__side-btn active" data-panel="ferrari">Ferrari</button>
+          <button class="catalog-menu__side-btn" data-panel="lamborghini">Lamborghini</button>
+          <button class="catalog-menu__side-btn" data-panel="suv">SUVs</button>
+          <button class="catalog-menu__side-btn" data-panel="hiper">Hipercarros</button>
+        </aside>
+
+        <div class="catalog-menu__slides">
+          <div class="catalog-slide active" id="ferrari">
+            <h3>Ferrari</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-f8.html" class="catalog-card"><strong>F8 Tributo</strong><span>2023 • V8 Biturbo</span></a>
+              <a href="detalhe-purosangue.html" class="catalog-card"><strong>Purosangue</strong><span>2025 • SUV</span></a>
             </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="#catalogo-menu">Catálogo</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
+          </div>
+          <div class="catalog-slide" id="lamborghini">
+            <h3>Lamborghini</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-lambo.html" class="catalog-card"><strong>Aventador SVJ</strong><span>2021 • V12</span></a>
+              <a href="detalhe-urus.html" class="catalog-card"><strong>Urus</strong><span>2023 • SUV</span></a>
+            </div>
+          </div>
+          <div class="catalog-slide" id="suv">
+            <h3>SUVs</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-dbx.html" class="catalog-card"><strong>DBX707</strong><span>2024 • V8</span></a>
+              <a href="detalhe-rsq8.html" class="catalog-card"><strong>Audi RS Q8</strong><span>2023 • V8</span></a>
+              <a href="detalhe-brabus.html" class="catalog-card"><strong>Brabus G63 800</strong><span>2023 • V8</span></a>
+            </div>
+          </div>
+          <div class="catalog-slide" id="hiper">
+            <h3>Hipercarros</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-mercedes.html" class="catalog-card"><strong>AMG ONE</strong><span>2022 • Híbrido</span></a>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <main class="container">
-        <!-- Hero Section -->
-        <section class="hero-section reveal visible" style="margin-top: 2rem;">
-            <div class="hero-wrap">
-                <div class="hero-left">
-                    <p class="eyebrow">Excelência em Serviços</p>
-                    <h1 class="hero-title">Cuidados Premium para seu Supercarro</h1>
-                    <p class="hero-subtitle">
-                        Na Velluto Motors, cada serviço é pensado para manter o desempenho e a estética de verdadeiras máquinas de alta performance.
-                    </p>
-                </div>
-                <div class="hero-right">
-                    <!-- ⚠️ Coloque uma imagem real aqui -->
-                    <img src="images/servicos-hero.jpg" alt="Serviços Velluto" />
-                </div>
-            </div>
-        </section>
+  <!-- Script do Catálogo -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sideButtons = document.querySelectorAll('.catalog-menu__side-btn');
+      const slides = document.querySelectorAll('.catalog-slide');
 
-        <!-- Serviços -->
-        <section class="section">
-            <div class="details-content">
-                <div class="details-specs">
-                    <h2 class="section__title">Serviços Disponíveis</h2>
+      sideButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const target = this.dataset.panel;
+          sideButtons.forEach(b => b.classList.remove('active'));
+          slides.forEach(s => s.classList.remove('active'));
+          this.classList.add('active');
+          document.getElementById(target)?.classList.add('active');
+        });
+      });
+    });
+  </script>
 
-                    <div class="servico-item">
-                        <h3>Manutenção Premium</h3>
-                        <p>Revisões completas com diagnóstico avançado e peças originais.</p>
-                        <a href="https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20em%20Manutenção%20Premium" target="_blank" class="btn-primary">
-                            💬 Falar no WhatsApp
-                        </a>
-                    </div>
-
-                    <div class="servico-item">
-                        <h3>Preparação de Performance</h3>
-                        <p>Upgrades de motor, escapamento esportivo e ajustes de ECU.</p>
-                        <a href="https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20em%20Preparação%20de%20Performance" target="_blank" class="btn-primary">
-                            💬 Falar no WhatsApp
-                        </a>
-                    </div>
-
-                    <div class="servico-item">
-                        <h3>Customização Exclusiva</h3>
-                        <p>Personalização estética completa: rodas, pintura e acabamento interno.</p>
-                        <a href="https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20em%20Customização%20Exclusiva" target="_blank" class="btn-primary">
-                            💬 Falar no WhatsApp
-                        </a>
-                    </div>
-
-                    <div class="servico-item">
-                        <h3>Detalhamento Automotivo</h3>
-                        <p>Polimento técnico, vitrificação e proteção completa da pintura.</p>
-                        <a href="https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20em%20Detalhamento%20Automotivo" target="_blank" class="btn-primary">
-                            💬 Falar no WhatsApp
-                        </a>
-                    </div>
-                </div>
-
-                <div class="details-image">
-                    <!-- ⚠️ Coloque uma imagem real aqui -->
-                    <img src="images/servicos-detail.jpg" alt="Atelier de Serviços" />
-                </div>
-            </div>
-        </section>
-
-        <!-- Contato Destacado -->
-        <section class="section" style="text-align: center;">
-            <h2 class="section__title">Agende seu Serviço</h2>
-            <p style="margin: 1rem 0;">
-                Fale diretamente com nossa equipe e garanta atendimento exclusivo.
+  <!-- Conteúdo Principal -->
+  <main id="conteudo">
+    
+    <!-- Hero Section -->
+    <section class="hero-section" style="margin-top: 0; padding: 2rem 0;">
+      <div class="container">
+        <div class="hero-wrap">
+          <div class="hero-left">
+            <p class="eyebrow">Excelência em Serviços</p>
+            <h1 class="hero-title">Cuidados Premium para seu Supercarro</h1>
+            <p class="hero-subtitle">
+              Na Velluto Motors, cada serviço é pensado para manter o desempenho e a estética de verdadeiras máquinas de alta performance.
             </p>
-
-            <a href="tel:+5511999999999" class="btn-primary">
-                📞 Ligar agora: (11) 99999-9999
-            </a>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Velluto Motors</p>
+            <div class="hero-actions">
+              <a class="btn btn--gold" href="https://wa.me/5511994761582" target="_blank" rel="noopener">Falar com Consultor</a>
+            </div>
+          </div>
+          <div class="hero-right">
+            <img src="images/servicos-hero.jpg" alt="Serviços Velluto Motors" />
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
+
+    <!-- Serviços Disponíveis -->
+    <section class="section">
+      <div class="container">
+        
+        <header class="section__header">
+          <h2 class="section__title">Nossos Serviços</h2>
+          <p class="section__subtitle">Soluções completas para manter seu veículo em perfeito estado.</p>
+        </header>
+
+        <div class="details-content">
+          <div class="details-specs">
+            
+            <div class="servico-card">
+              <h3>🔧 Manutenção Premium</h3>
+              <p>Revisões completas com diagnóstico avançado e peças originais de fábrica.</p>
+              <a href="https://wa.me/5511994761582?text=Olá,%20tenho%20interesse%20em%20Manutenção%20Premium" target="_blank" class="btn btn--ghost">
+                Solicitar Orçamento
+              </a>
+            </div>
+
+            <div class="servico-card">
+              <h3>⚡ Preparação de Performance</h3>
+              <p>Upgrades de motor, escapamento esportivo e ajustes de ECU para máximo desempenho.</p>
+              <a href="https://wa.me/5511994761582?text=Olá,%20tenho%20interesse%20em%20Preparação%20de%20Performance" target="_blank" class="btn btn--ghost">
+                Solicitar Orçamento
+              </a>
+            </div>
+
+            <div class="servico-card">
+              <h3>🎨 Customização Exclusiva</h3>
+              <p>Personalização estética completa: rodas especiais, pintura premium e acabamento interno em couro.</p>
+              <a href="https://wa.me/5511994761582?text=Olá,%20tenho%20interesse%20em%20Customização%20Exclusiva" target="_blank" class="btn btn--ghost">
+                Solicitar Orçamento
+              </a>
+            </div>
+
+            <div class="servico-card">
+              <h3>✨ Detalhamento Automotivo</h3>
+              <p>Polimento técnico, vitrificação de pintura e proteção completa para um brilho impecável.</p>
+              <a href="https://wa.me/5511994761582?text=Olá,%20tenho%20interesse%20em%20Detalhamento%20Automotivo" target="_blank" class="btn btn--ghost">
+                Solicitar Orçamento
+              </a>
+            </div>
+
+          </div>
+
+          <div class="details-image">
+            <img src="images/servicos-detail.jpg" alt="Atelier de Serviços Velluto Motors" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+      <div class="container">
+        <h3>Agende seu Serviço</h3>
+        <p>Fale diretamente com nossa equipe e garanta atendimento exclusivo para seu veículo.</p>
+        <a href="tel:+5511994761582" class="btn btn--gold btn--large">
+          📞 Ligar agora: (11) 99476-1582
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Contato: 
+        <a href="tel:+5511994761582">(11) 99476-1582</a> | 
+        <a href="https://wa.me/5511994761582" target="_blank" rel="noopener">WhatsApp</a> | 
+        <a href="mailto:concierge@vellutomotors.com.br">E-mail</a>
+      </p>
+      <p>&copy; 2026 Velluto Motors. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -1,1 +1,1 @@
-# Projeto-em-desenvolvimento-de-software-
+# A Velluto Motors é uma plataforma web de alto padrão desenvolvida para a vitrine e comercialização de veículos de luxo. O foco do projeto é proporcionar uma experiência de navegação sofisticada, unindo um design minimalista à funcionalidade de um catálogo premium.

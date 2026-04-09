@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -150,4 +151,158 @@
         </div>
     </footer>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ferrari Purosangue 2025 - Velluto Motors</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <div class="brand">
+                <a href="index.html" class="brand__link">
+                    <img src="images/VM_logo.PNG" alt="Velluto Motors" class="brand__logo"/>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#catalogo-menu">Catálogo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="section hero-section">
+            <div class="hero-wrap">
+                <div class="hero-left">
+                    <p class="eyebrow">FUV - Ferrari Utility Vehicle</p>
+                    <h1 class="hero-title">Ferrari Purosangue 2025</h1>
+                    <p class="hero-subtitle">O primeiro quatro portas com alma de pista. O purismo do V12 aspirado em uma nova dimensão de luxo.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn--gold" href="https://wa.me/5511994761582" target="_blank" rel="noopener">Agendar Test Drive</a>
+                        <a class="btn btn--outline" href="index.html">Voltar</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="images/FerrariPuroSangue.png" alt="Ferrari Purosangue 2025" />
+                </div>
+            </div>
+        </section>
+
+        <section class="section stats-section reveal">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card"><strong>0-100 km/h</strong><span>3,3s</span></div>
+                    <div class="stat-card"><strong>Potência</strong><span>725 cv</span></div>
+                    <div class="stat-card"><strong>Máx</strong><span>310 km/h</span></div>
+                    <div class="stat-card"><strong>Motor</strong><span>V12 6.5L Aspirado</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section details-section reveal">
+            <div class="container">
+                <header class="section__header">
+                    <h2 class="section__title">Versatilidade e Performance</h2>
+                    <p class="section__subtitle">A única no mundo a combinar o DNA de Maranello com conforto absoluto para quatro ocupantes.</p>
+                </header>
+                <div class="details-content">
+                    <div class="details-image">
+                        <img src="images/FerrariPuroSangue.png" alt="Detalhes Purosangue"/>
+                    </div>
+                    <div class="details-specs">
+                        <h3>Mecânica</h3>
+                        <ul>
+                            <li><strong>Motor:</strong> V12 a 65° Aspirado</li>
+                            <li><strong>Câmbio:</strong> Dual-Clutch 8 marchas</li>
+                            <li><strong>Tração:</strong> AWD com vetorização de torque</li>
+                        </ul>
+                        <h3>Inovação</h3>
+                        <ul>
+                            <li>Portas traseiras "Welcome Doors"</li>
+                            <li>Suspensão Ativa Ferrari</li>
+                            <li>Chassis em fibra de carbono e alumínio</li>
+                        </ul>
+                        <h3>Lifestyle</h3>
+                        <ul>
+                            <li>Quatro poltronas independentes</li>
+                            <li>Porta-malas de 473 litros</li>
+                            <li>Sistema de som Burmester® 3D</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section gallery-section reveal">
+            <div class="container">
+                <header class="section__header">
+                    <h2 class="section__title">Galeria Purosangue</h2>
+                    <p class="section__subtitle">A elegância fluida de um verdadeiro sangue puro.</p>
+                </header>
+                <div class="gallery-wrap">
+                    <div class="gallery-main">
+                        <img id="gallery-main-img" src="images/FerrariPuroSangue.png" alt="Ferrari Purosangue Principal"/>
+                    </div>
+                    <div class="gallery-thumbs" aria-label="Miniaturas da galeria">
+                        <button class="thumb active" data-src="images/FerrariPuroSangue.png" aria-label="Frente"><img src="images/FerrariPuroSangue.png" alt="Ferrari Purosangue frente"/></button>
+                        <button class="thumb" data-src="images/Puro-lateral.jpg" aria-label="Lateral"><img src="images/Puro-lateral.jpg" alt="Purosangue lateral"/></button>
+                        <button class="thumb" data-src="images/Puro-interior.jpg" aria-label="Interior"><img src="images/Puro-interior.jpg" alt="Purosangue interior"/></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="container">
+                <div class="cta-section">
+                    <a class="btn btn--gold" href="https://wa.me/5511994761582" target="_blank" rel="noopener">Falar com Consultor</a> 
+                    <a class="btn btn--outline" href="index.html">Voltar ao catálogo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Galeria
+            const mainImg = document.getElementById('gallery-main-img');
+            const thumbs = document.querySelectorAll('.gallery-thumbs .thumb');
+            thumbs.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const src = this.dataset.src;
+                    if (!src) return;
+                    mainImg.src = src;
+                    mainImg.alt = this.querySelector('img')?.alt || 'Imagem da Ferrari Purosangue';
+                    thumbs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Efeito Reveal
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+            reveals.forEach(r => observer.observe(r));
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Velluto Motors</p>
+        </div>
+    </footer>
+</body>
+>>>>>>> c419338f17cbef70b3e78a373da07c1fa46e9517
 </html>

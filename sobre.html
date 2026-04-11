@@ -1,64 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sobre - Velluto Motors</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre — Velluto Motors</title>
+  <meta name="description" content="Conheça a história da Velluto Motors e nossa paixão por supercarros." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header class="header">
-        <div class="container header__inner">
-            <div class="brand"><a href="index.html" class="brand__link"><img src="images/VM_logo.PNG" alt="Velluto Motors" class="brand__logo"/></a></div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="#catalogo-menu">Catálogo</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <a href="index.html" class="brand__link" aria-label="Velluto Motors — Início">
+          <img src="images/VM_logo.PNG" alt="Velluto Motors" class="brand__logo" />
+        </a>
+      </div>
+      
+      <nav class="nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html#catalogo-menu">Catálogo</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a class="btn btn--gold" href="https://wa.me/5511994761582" target="_blank" rel="noopener">Consultor VIP</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Menu Catálogo Fullscreen -->
+  <section id="catalogo-menu" class="catalog-menu" aria-labelledby="catalogo-title">
+    <div class="catalog-menu__inner">
+      <div class="catalog-menu__top">
+        <h2 id="catalogo-title">Catálogo</h2>
+        <a href="#" class="catalog-menu__close" aria-label="Fechar catálogo">×</a>
+      </div>
+      <div class="catalog-menu__wrap">
+        <aside class="catalog-menu__side">
+          <button class="catalog-menu__side-btn active" data-panel="ferrari">Ferrari</button>
+          <button class="catalog-menu__side-btn" data-panel="lamborghini">Lamborghini</button>
+          <button class="catalog-menu__side-btn" data-panel="suv">SUVs</button>
+          <button class="catalog-menu__side-btn" data-panel="hiper">Hipercarros</button>
+        </aside>
+
+        <div class="catalog-menu__slides">
+          <div class="catalog-slide active" id="ferrari">
+            <h3>Ferrari</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-f8.html" class="catalog-card"><strong>F8 Tributo</strong><span>2023 • V8 Biturbo</span></a>
+              <a href="detalhe-purosangue.html" class="catalog-card"><strong>Purosangue</strong><span>2025 • SUV</span></a>
+            </div>
+          </div>
+          <div class="catalog-slide" id="lamborghini">
+            <h3>Lamborghini</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-lambo.html" class="catalog-card"><strong>Aventador SVJ</strong><span>2021 • V12</span></a>
+              <a href="detalhe-urus.html" class="catalog-card"><strong>Urus</strong><span>2023 • SUV</span></a>
+            </div>
+          </div>
+          <div class="catalog-slide" id="suv">
+            <h3>SUVs</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-dbx.html" class="catalog-card"><strong>DBX707</strong><span>2024 • V8</span></a>
+              <a href="detalhe-rsq8.html" class="catalog-card"><strong>Audi RS Q8</strong><span>2023 • V8</span></a>
+              <a href="detalhe-brabus.html" class="catalog-card"><strong>Brabus G63 800</strong><span>2023 • V8</span></a>
+            </div>
+          </div>
+          <div class="catalog-slide" id="hiper">
+            <h3>Hipercarros</h3>
+            <div class="catalog-slide__cards">
+              <a href="detalhe-mercedes.html" class="catalog-card"><strong>AMG ONE</strong><span>2022 • Híbrido</span></a>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <main class="container">
-        <section class="hero-section reveal visible" style="margin-top: 2rem;">
-            <div class="hero-wrap">
-                <div class="hero-left">
-                    <p class="eyebrow">Nossa Herança</p>
-                    <h1 class="hero-title">A Arte de Curar Supercarros</h1>
-                    <p class="hero-subtitle">Fundada em Modena e lapidada em São Paulo, a Velluto Motors não vende apenas veículos; nós entregamos troféus de engenharia.</p>
-                </div>
-                <div class="hero-right">
-                    <img src="images/fachada.jpg" alt="Showroom Velluto" />
-                </div>
-            </div>
-        </section>
+  <!-- Script do Catálogo -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sideButtons = document.querySelectorAll('.catalog-menu__side-btn');
+      const slides = document.querySelectorAll('.catalog-slide');
 
-        <section class="section">
-            <div class="details-content">
-                <div class="details-image">
-                    <img src="images/atelier.jpg" alt="Atelier Velluto" />
-                </div>
-                <div class="details-specs">
-                    <h2 class="section__title">A História</h2>
-                    <p>A Velluto Motors nasceu do desejo de trazer o conceito "Atelier" para o Brasil. O nome **Velluto** (Veludo, em italiano) reflete nossa filosofia: uma experiência suave, resiliente e de altíssimo valor.</p>
-                    
-                    <h3 style="margin-top: 1.5rem; color: #005F6B;">Parcerias de Performance</h3>
-                    <p>Ao longo dos anos, consolidamos alianças com os maiores nomes da indústria para garantir que cada carro em nosso catálogo seja único:</p>
-                    <ul style="margin-top: 1rem;">
-                        <li><strong>Brabus Heritage:</strong> Consultoria oficial para personalização de motores V8 e V12.</li>
-                        <li><strong>Pirelli P-Zero World:</strong> Acesso exclusivo a compostos de pneus de competição para nossos clientes.</li>
-                        <li><strong>Akrapovič Exhaust:</strong> Sistemas de exaustão em titânio instalados por técnicos certificados.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+      sideButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const target = this.dataset.panel;
+          sideButtons.forEach(b => b.classList.remove('active'));
+          slides.forEach(s => s.classList.remove('active'));
+          this.classList.add('active');
+          document.getElementById(target)?.classList.add('active');
+        });
+      });
+    });
+  </script>
 
-    <footer class="footer">
-        <div class="container"><p>&copy; 2026 Velluto Motors</p></div>
-    </footer>
+  <!-- Conteúdo Principal -->
+  <main id="conteudo">
+    
+    <!-- Hero Section -->
+    <section class="hero-section" style="margin-top: 0; padding: 3rem 0;">
+      <div class="container">
+        <div class="hero-wrap" style="grid-template-columns: 1fr; text-align: center;">
+          <div class="hero-left">
+            <p class="eyebrow">Nossa Herança</p>
+            <h1 class="hero-title">A Arte de Curar Supercarros</h1>
+            <p class="hero-subtitle" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+              Fundada em Modena e lapidada em São Paulo, a Velluto Motors não vende apenas veículos; nós entregamos troféus de engenharia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conteúdo da História -->
+    <section class="section">
+      <div class="container">
+        
+        <div class="details-content" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto;">
+          
+          <div class="details-specs">
+            <h2 class="section__title">A História</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 2rem;">
+              A Velluto Motors nasceu do desejo de trazer o conceito "Atelier" para o Brasil. O nome <strong>Velluto</strong> (Veludo, em italiano) reflete nossa filosofia: uma experiência suave, resiliente e de altíssimo valor.
+            </p>
+            
+            <h3 style="margin-top: 1.5rem; color: var(--blue-petroleum); font-family: 'Playfair Display', serif; font-size: 1.8rem;">
+              Parcerias de Performance
+            </h3>
+            <p style="margin-bottom: 1.5rem; color: #666;">
+              Ao longo dos anos, consolidamos alianças com os maiores nomes da indústria para garantir que cada carro em nosso catálogo seja único:
+            </p>
+            
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1.5rem; padding-left: 1.5rem; border-left: 4px solid var(--blue-petroleum);">
+                <strong style="font-size: 1.2rem; color: var(--gray-graphite);">Brabus Heritage</strong>
+                <p style="color: #666; margin-top: 0.5rem;">Consultoria oficial para personalização de motores V8 e V12.</p>
+              </li>
+              <li style="margin-bottom: 1.5rem; padding-left: 1.5rem; border-left: 4px solid var(--blue-petroleum);">
+                <strong style="font-size: 1.2rem; color: var(--gray-graphite);">Pirelli P-Zero World</strong>
+                <p style="color: #666; margin-top: 0.5rem;">Acesso exclusivo a compostos de pneus de competição para nossos clientes.</p>
+              </li>
+              <li style="margin-bottom: 1.5rem; padding-left: 1.5rem; border-left: 4px solid var(--blue-petroleum);">
+                <strong style="font-size: 1.2rem; color: var(--gray-graphite);">Akrapovič Exhaust</strong>
+                <p style="color: #666; margin-top: 0.5rem;">Sistemas de exaustão em titânio instalados por técnicos certificados.</p>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Contato: 
+        <a href="tel:+5511994761582">(11) 99476-1582</a> | 
+        <a href="https://wa.me/5511994761582" target="_blank" rel="noopener">WhatsApp</a> | 
+        <a href="mailto:concierge@vellutomotors.com.br">E-mail</a>
+      </p>
+      <p>&copy; 2026 Velluto Motors. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

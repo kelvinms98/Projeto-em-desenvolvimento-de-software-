@@ -28,6 +28,16 @@ body {
   z-index: 999;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-bottom: none;
+<<<<<<< HEAD
+  box-shadow: none;
+
+position: sticky;      /* Faz o menu grudar */
+  top: 0;               /* No topo da tela */
+  z-index: 1000;        /* Garante que fique em cima de tudo */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para dar profundidade */
+
+=======
+>>>>>>> c419338f17cbef70b3e78a373da07c1fa46e9517
 }
 
 .header .container {
